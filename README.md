@@ -34,9 +34,15 @@ const cerm = require("cermjs"); // ES5
         > cerm.setDebugMode(true) // to enable it
         
 - The `listAll` method allows you to get the entire list of listeners that you suscribed 
+    - Example:
+        > cerm.listAll();
+                   
 - The `getListenerDetailsByType` method allows you to get the details of an event listener you suscribed by his type
     - Parameter:
         - `type`: A case-sensitive string representing the event type to use for getting the details
+    - Example:
+        > cerm.getListenerDetailsByType("click"); // get all suscribed event with "click" type
+        
 - The `getListenerDetailsById` method allows you to get the details of an event listener you suscribed by his id _(note: each saved event has an uniq id)_
     - Parameter:
         - `id`: A case-sensitive string or a number indicating that used for getting the details
