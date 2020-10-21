@@ -1,0 +1,17 @@
+{
+  "name": "cermjs",
+  "version": "1.0.0",
+  "description": "Small software library to manage event listeners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ben Lmsc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ARKHN3B/window-event-manager.git"
+  },
+  "bugs": "https://github.com/ARKHN3B/window-event-manager/issues",
+  "license": "GNU General Public License v3.0"
+}

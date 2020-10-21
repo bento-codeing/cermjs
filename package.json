@@ -1,0 +1,25 @@
+{
+  "name": "event-register-manager-sources",
+  "version": "1.0.0",
+  "description": "Sources related to the package custom event register manager (cermjs)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pre-build": "babel src/index.js -d build",
+    "uglify": "uglifyjs -c -o export/index.js -- build/src/index.js",
+    "build": "npm run pre-build && npm run uglify"
+  },
+  "keywords": [],
+  "author": "Ben Lmsc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ARKHN3B/window-event-manager.git"
+  },
+  "bugs": "https://github.com/ARKHN3B/window-event-manager/issues",
+  "license": "GNU General Public License v3.0",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "uglify-js": "^3.11.2"
+  }
+}
