@@ -85,6 +85,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
+        // show "Hello World!" in the web console when key pressed
         cerm.addEventListener(
             document.body, 
             "keypress", 
@@ -124,7 +125,7 @@ const cerm = require("cermjs"); // ES5
     - Example:
         ```js
         // Remove all keypress event listeners on any target
-        cerm.removeEventListenersByType("keypress");
+        cerm.removeEventListenersByTarget("keypress");
         ```
 
 - The `removeEventListenersByTargets` method allows you to remove all the event listeners attached for each target provided in args
@@ -133,7 +134,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        cerm.removeEventListenersByTypes(["keypress", "click", "customEvent1"]);
+        cerm.removeEventListenersByTargets(["keypress", "click", "customEvent1"]);
         ```
 
 - The `removeEventListenerById` method allows you to remove all the event listeners attached by a specific id
@@ -143,8 +144,8 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        // Remove all keypress event listeners on any target
-        cerm.removeEventListenersByType("keypress");
+        // Remove the event listener with specific id
+        cerm.removeEventListenerById("keypress");
         ```
 
 - The `removeEventListenerByIds` method allows you to remove all the event listeners attached for each id provided in args
@@ -153,7 +154,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        cerm.removeEventListenersByTypes(["keypress", "click", "customEvent1"]);
+        cerm.removeEventListenerByIds(["keypress", "click", "customEvent1"]);
         ```
 
 ## Example
@@ -172,7 +173,7 @@ cerm.removeEventListenersByType("waitingSomething"); // removeEventListener
 [@ARKHN3B](https://github.com/ARKHN3B) (Ben Lmsc)
 
 ## Known bugs
-No bugs found for the moment. Please do not hesitate to report the issue here : []()
+No bugs found for the moment. Please do not hesitate to report the issue here : [issues](https://github.com/ARKHN3B/cermjs/issues)
 
 ## Contributing
 Become the first contributor ! 
