@@ -31,25 +31,57 @@ const cerm = require("cermjs"); // ES5
         - `use`: A boolean indicating that the debug should be enable or not. Default to ```false```
         
     - Example:
-        > cerm.setDebugMode(true) // to enable it
+        ```js
+        cerm.setDebugMode(true) // to enable it
+        ```
         
 - The `listAll` method allows you to get the entire list of listeners that you suscribed 
     - Example:
-        > cerm.listAll();
+        ```js
+        cerm.listAll();
+        ```
                    
 - The `getListenerDetailsByType` method allows you to get the details of an event listener you suscribed by his type
     - Parameter:
         - `type`: A case-sensitive string representing the event type to use for getting the details
         
     - Example:
-        > cerm.getListenerDetailsByType("click"); // get all suscribed event with "click" type
+        ```js
+        // get all suscribed event with "click" type
+        cerm.getListenerDetailsByType("click"); 
+        ```
         
 - The `getListenerDetailsById` method allows you to get the details of an event listener you suscribed by his id _(note: each saved event has an uniq id)_
     - Parameter:
         - `id`: A case-sensitive string or a number indicating that used for getting the details
     
     - Example:
-        > cerm.getListenerDetailsById(0) // get the saved event with the id 0
+        ```js
+        // get the saved event with the id 0
+        cerm.getListenerDetailsById(0)
+        ```
+
+- The `addEventListener` method allows you to add an event listener on specific target and saved it in internal history
+    - Parameters:
+        - `target`: An element to attach the listener
+        - `type`: A case-sensitive string representing the event type to listen for
+        - `listener`: An event listener callback
+        - `options`: An options object specifies characteristics about the event listener
+        - `customId`: A custom id used to set the _id of the event
+    
+    - Example:
+        ```js
+        cerm.addEventListener(
+            document.body, 
+            "keypress", 
+            function (event) {
+                console.debug("Hello World!");
+            }, 
+            undefined, 
+            "testId"
+        );
+        ```
+
 
 ## License
 [GNU General Public License v3.0](https://github.com/ARKHN3B/cermjs/blob/main/LICENSE)

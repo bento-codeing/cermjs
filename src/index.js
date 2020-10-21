@@ -52,10 +52,10 @@ class CustomEventRegisterManager {
   /**
    * Add event listener on specific target
    * @param {Element|Window|Document} target - An element to attach the listener
-   * @param {string} type     - A case-sensitive string representing the event type to listen for
-   * @param listener          - An event listener callback
-   * @param options {Object}  - An options object specifies characteristics about the event listener
-   * @param customId {string} - A custom id used to set the _id of the event
+   * @param {string} type                    - A case-sensitive string representing the event type to listen for
+   * @param listener                         - An event listener callback
+   * @param {Object} options                 - An options object specifies characteristics about the event listener
+   * @param {string} customId                - A custom id used to set the _id of the event
    */
   addEventListener(target = window, type, listener, options = {}, customId) {
     let details = [{
