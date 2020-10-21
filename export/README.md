@@ -18,6 +18,9 @@ Small software library to manage event listeners. Allows to easily preserve in m
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
+- **1.0.2** - Update documentation
+- **1.0.1** - Update documentation
+- **1.0.0** - First deploy
 
 ## News
 ###### No news
@@ -55,17 +58,17 @@ const cerm = require("cermjs"); // ES5
         cerm.listAll();
         ```
                    
-- The `getListenerDetailsByType` method allows you to get the details of an event listener you suscribed by his type
+- The `getListenerDetailsByType` method allows you to get the details of all event listeners for a specific type
     - Parameter:
         - `type`: A case-sensitive string representing the event type to use for getting the details
         
     - Example:
         ```js
-        // get all suscribed event with "click" type
+        // get all suscribed event listeners for the "click" type
         cerm.getListenerDetailsByType("click"); 
         ```
         
-- The `getListenerDetailsById` method allows you to get the details of an event listener you suscribed by his id _(note: each saved event has an uniq id)_
+- The `getListenerDetailsById` method allows you to get the details of an event listener by his internal id _(note: each saved event has an uniq id)_
     - Parameter:
         - `id`: A case-sensitive string or a number indicating that used for getting the details
     
@@ -75,7 +78,7 @@ const cerm = require("cermjs"); // ES5
         cerm.getListenerDetailsById(0)
         ```
 
-- The `addEventListener` method allows you to add an event listener on specific target and saved it in internal history
+- The `addEventListener` method allows you to add an event listener for a specific target and preserves it in internal history
     - Parameters:
         - `target`: An element to attach the listener
         - `type`: A case-sensitive string representing the event type to listen for
@@ -85,6 +88,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
+        // show "Hello World!" in the web console when key pressed
         cerm.addEventListener(
             document.body, 
             "keypress", 
@@ -96,7 +100,7 @@ const cerm = require("cermjs"); // ES5
         );
         ```
 
-- The `removeEventListenersByType` method allows you to remove all the event listeners attached by a specific type
+- The `removeEventListenersByType` method allows you to remove all the event listeners attached to a specific type
     - Parameters:
         - `type`: A case-sensitive string representing the event type to use for remove the associated listeners
         - `basicCheckProcess`: A boolean that determines if we need to execute the basic check up process. Default to `true`.
@@ -123,8 +127,8 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        // Remove all keypress event listeners on any target
-        cerm.removeEventListenersByType("keypress");
+        // Remove all event listeners for a target
+        cerm.removeEventListenersByTarget(document.body);
         ```
 
 - The `removeEventListenersByTargets` method allows you to remove all the event listeners attached for each target provided in args
@@ -133,18 +137,18 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        cerm.removeEventListenersByTypes(["keypress", "click", "customEvent1"]);
+        cerm.removeEventListenersByTargets(["keypress", "click", "customEvent1"]);
         ```
 
-- The `removeEventListenerById` method allows you to remove all the event listeners attached by a specific id
+- The `removeEventListenerById` method allows you to remove all the event listeners attached by a his id
     - Parameters:
         - `id`: A related id used that identify the event listener to remove
         - `basicCheckProcess`: A boolean that determines if we need to execute the basic check up process. Default to `true`
     
     - Example:
         ```js
-        // Remove all keypress event listeners on any target
-        cerm.removeEventListenersByType("keypress");
+        // Remove the event listener with specific id
+        cerm.removeEventListenerById("keypress");
         ```
 
 - The `removeEventListenerByIds` method allows you to remove all the event listeners attached for each id provided in args
@@ -153,7 +157,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        cerm.removeEventListenersByTypes(["keypress", "click", "customEvent1"]);
+        cerm.removeEventListenerByIds(["keypress", "click", "customEvent1"]);
         ```
 
 ## Example
