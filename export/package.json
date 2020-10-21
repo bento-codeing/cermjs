@@ -1,10 +1,11 @@
 {
   "name": "cermjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Small software library to manage event listeners",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
   },
   "keywords": ["cerm", "cermjs", "custom event register manager", "event listener", "javascript"],
   "author": "Ben Lmsc",
