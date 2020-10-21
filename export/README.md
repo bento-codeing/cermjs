@@ -13,6 +13,7 @@ Small software library to manage event listeners. Allows to easily preserve in m
 
 ## Quick Features
 - Lightweight (6kb)
+- No dependency
 - Easily remove event listeners
 - Easily manage event listeners
 
