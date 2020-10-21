@@ -170,7 +170,7 @@ class CustomEventRegisterManager {
 
   /**
    * Remove an event listener by his id provided in args
-   * @param id {string|number} - A related id used to identify the event
+   * @param id {string|number} - A related id used that identify the event listener
    * @param basicCheckProcess  - A boolean that determines if we need to execute the basic check up process
    * @return {boolean}         - True if the process has been successfulled. Otherwise, false.
    */
