@@ -29,7 +29,9 @@ const cerm = require("cermjs"); // ES5
 ## API
 - The `setDebugMode` method allows you to set the debug mode
     - Parameter:
-        - `use`: A boolean indicating that the debug should be enable or not
+        - `use`: A boolean indicating that the debug should be enable or not. Default to ```false```
+    - Example:
+        > cerm.setDebugMode(true) // to enable it
         
 - The `listAll` method allows you to get the entire list of listeners that you suscribed 
 - The `getListenerDetailsByType` method allows you to get the details of an event listener you suscribed by his type
