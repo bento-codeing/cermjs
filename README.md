@@ -127,8 +127,8 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        // Remove all keypress event listeners on any target
-        cerm.removeEventListenersByTarget("keypress");
+        // Remove all event listeners for a target
+        cerm.removeEventListenersByTarget(document.body);
         ```
 
 - The `removeEventListenersByTargets` method allows you to remove all the event listeners attached for each target provided in args
