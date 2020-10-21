@@ -11,6 +11,11 @@
 ## General information
 Small software library to manage event listeners. Allows to easily preserve in memory all the events that are used through your DOM and allows you to manage the deletion of event listeners more easily.
 
+## Quick Features
+- Lightweight (6kb)
+- Easily remove event listeners
+- Easily manage event listeners
+
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
 
@@ -153,7 +158,11 @@ const cerm = require("cermjs"); // ES5
 
 ## Example
 ```js
-
+cerm.addEventListener(window, "waitingSomething", function (event) { // addEventListener
+  console.debug("Do something");
+});
+/...
+cerm.removeEventListenersByType("waitingSomething"); // removeEventListener
 ```
 
 ## License
