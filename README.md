@@ -18,7 +18,6 @@ The best way to consume CERMJS is via the npm package which you can install with
 #### Design pattern
 CERM is a module based on a design pattern: the singleton. The objective is to restrict the instance of its class to a single call. In this way, no matter where you call it from, it will always be the same instance.
 
-
 #### Usage 
 To call this module, nothing could be easier. Simply import the module as soon as you need it like this: 
 ```js
@@ -30,6 +29,7 @@ const cerm = require("cermjs"); // ES5
 - The `setDebugMode` method allows you to set the debug mode
     - Parameter:
         - `use`: A boolean indicating that the debug should be enable or not. Default to ```false```
+        
     - Example:
         > cerm.setDebugMode(true) // to enable it
         
@@ -40,12 +40,16 @@ const cerm = require("cermjs"); // ES5
 - The `getListenerDetailsByType` method allows you to get the details of an event listener you suscribed by his type
     - Parameter:
         - `type`: A case-sensitive string representing the event type to use for getting the details
+        
     - Example:
         > cerm.getListenerDetailsByType("click"); // get all suscribed event with "click" type
         
 - The `getListenerDetailsById` method allows you to get the details of an event listener you suscribed by his id _(note: each saved event has an uniq id)_
     - Parameter:
         - `id`: A case-sensitive string or a number indicating that used for getting the details
+    
+    - Example:
+        > cerm.getListenerDetailsById(0) // get the saved event with the id 0
 
 ## License
 [GNU General Public License v3.0](https://github.com/ARKHN3B/cermjs/blob/main/LICENSE)
