@@ -1,4 +1,4 @@
-![](landing.png) 
+![](https://raw.githubusercontent.com/ARKHN3B/cermjs/main/landing.png) 
 
 ![](https://img.shields.io/badge/build-success-success)
 ![](https://img.shields.io/npm/v/cermjs)
@@ -13,6 +13,7 @@ Small software library to manage event listeners. Allows to easily preserve in m
 
 ## Quick Features
 - Lightweight (6kb)
+- No dependency
 - Easily remove event listeners
 - Easily manage event listeners
 
