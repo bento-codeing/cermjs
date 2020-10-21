@@ -18,6 +18,8 @@ Small software library to manage event listeners. Allows to easily preserve in m
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
+- **1.0.4** - Update documentation
+- **1.0.3** - Update documentation
 - **1.0.2** - Update documentation
 - **1.0.1** - Update documentation
 - **1.0.0** - First deploy
