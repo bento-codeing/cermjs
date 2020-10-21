@@ -1,6 +1,6 @@
 {
   "name": "cermjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small software library to manage event listeners",
   "main": "index.js",
   "scripts": {
