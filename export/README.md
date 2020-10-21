@@ -1,4 +1,4 @@
-![](landing.png) 
+![](https://raw.githubusercontent.com/ARKHN3B/cermjs/main/landing.png) 
 
 ![](https://img.shields.io/badge/build-success-success)
 ![](https://img.shields.io/npm/v/cermjs)
