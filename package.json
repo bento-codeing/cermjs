@@ -1,16 +1,21 @@
 {
   "name": "event-register-manager-sources",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sources related to the package custom event register manager (cermjs)",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "npm run build:types && npm run build:js && npm run postbuild:config",
-    "postbuild:config": "cp config/package.json LICENSE README.md lib",
-    "build:types": "tsc",
-    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+    "build": "npm run build:npm && npm run build:cdn",
+    "build:npm": "npm run build:types:npm && npm run build:js:npm && npm run postbuild:npm:config",
+    "build:cdn": "npm run build:types:cdn && npm run build:js:cdn && npm run postbuild:cdn:config",
+    "postbuild:npm:config": "cp config/package.json LICENSE README.md lib",
+    "postbuild:cdn:config": "cp LICENSE README.md cdn",
+    "build:types:npm": "tsc -p src/npm --outDir lib --isolatedModules",
+    "build:types:cdn": "tsc -p src/cdn --outDir cdn",
+    "build:js:npm": "babel src/npm --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "build:js:cdn": "babel src/cdn --out-dir cdn --extensions \".ts,.tsx\" --source-maps inline"
   },
   "keywords": [],
   "author": "Ben Lmsc",

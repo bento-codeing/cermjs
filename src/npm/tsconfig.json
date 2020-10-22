@@ -1,23 +1,19 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
     "sourceMap": true,
-    "lib": ["es5", "es6", "dom"],
+    "lib": ["es5", "es6", "dom", "es2015"],
     // Ensure that .d.ts files are created by tsc, but not .js files
     "declaration": true,
     "emitDeclarationOnly": true,
-    // Ensure that Babel can safely transpile files in the TypeScript project
-    "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true,
-    "outDir": "lib"
+    "downlevelIteration": true
   },
   "exclude": [
     "node_modules",
     "test",
     "assets",
     "config"
-  ],
-  "include": [
-    "src"
   ]
 }

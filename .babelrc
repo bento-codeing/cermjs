@@ -1,8 +1,24 @@
 {
   "presets": [
-    "@babel/preset-env",
     "@babel/preset-typescript"
   ],
+  "env": {
+    "cdn": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
+      ]
+    },
+    "npm": {
+      "presets": [
+        "@babel/preset-env"
+      ]
+    }
+  },
   "plugins": [
     "@babel/plugin-proposal-class-properties"
   ]
