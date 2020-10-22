@@ -11,6 +11,8 @@
 ## General information
 Small software library to manage event listeners. Allows to easily preserve in memory all the events that are used through your DOM and allows you to manage the deletion of event listeners more easily.
 
+With the advent of **Single Web Applications** (_**React, Vue, Angular**_), managing event listeners (and especially unmount them) can be painful. But thanks to **CERMJS** because the long hours of implementing a logic to remove our event listeners are definitively over! It becomes easy to remove an event listener invoked in a component A from a component B, or C.
+
 ## Quick Features
 - Lightweight (6kb)
 - No dependency
@@ -19,6 +21,7 @@ Small software library to manage event listeners. Allows to easily preserve in m
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
+- **1.1.0** - Add types, Build process automation, Update documentation, Add React tests
 - **1.0.5** - Remove unusued file
 - **1.0.4** - Update documentation
 - **1.0.3** - Update documentation

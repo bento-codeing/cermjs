@@ -1,13 +1,16 @@
 {
   "name": "event-register-manager-sources",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sources related to the package custom event register manager (cermjs)",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre-build": "babel src/index.js -d build",
-    "uglify": "uglifyjs -c -o export/index.js -- build/src/index.js",
-    "build": "npm run pre-build && npm run uglify"
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js && npm run postbuild:config",
+    "postbuild:config": "cp config/package.json LICENSE README.md lib",
+    "build:types": "tsc",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
   },
   "keywords": [],
   "author": "Ben Lmsc",
@@ -18,8 +21,11 @@
   "bugs": "https://github.com/ARKHN3B/window-event-manager/issues",
   "license": "GNU General Public License v3.0",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
     "uglify-js": "^3.11.2"
   }
 }

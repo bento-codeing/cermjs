@@ -1,8 +1,9 @@
 {
   "name": "cermjs",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Small software library to manage event listeners",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "npm publish --access public"
