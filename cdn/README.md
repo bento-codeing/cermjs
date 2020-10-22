@@ -21,6 +21,8 @@ With the advent of **Single Web Applications** (_**React, Vue, Angular**_), mana
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
+- **1.1.6** - Update documentation
+- **1.1.5** - Update documentation, Add to yarn package manager
 - **1.1.4** - Update documentation
 - **1.1.3** - Build process automation for using a CDN and NPM done, Update documentation
 - **1.1.2** - Update documentation
