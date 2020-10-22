@@ -21,7 +21,9 @@ With the advent of **Single Web Applications** (_**React, Vue, Angular**_), mana
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
-- **1.1.1** - Build process automation for using a CDN and NPM, Update documentation
+- **1.1.3** - Build process automation for using a CDN and NPM done, Update documentation
+- **1.1.2** - Update documentation
+- **1.1.1** - Build process automation for using a CDN (prepare) and NPM, Update documentation
 - **1.1.0** - Add types, Build process automation, Update documentation, Add React tests
 - **1.0.5** - Remove unusued file
 - **1.0.4** - Update documentation
@@ -156,7 +158,7 @@ const cerm = require("cermjs"); // ES5
     - Example:
         ```js
         // Remove the event listener with specific id
-        cerm.removeEventListenerById("keypress");
+        cerm.removeEventListenerById(1);
         ```
 
 - The `removeEventListenerByIds` method allows you to remove all the event listeners attached for each id provided in args
@@ -165,7 +167,7 @@ const cerm = require("cermjs"); // ES5
     
     - Example:
         ```js
-        cerm.removeEventListenerByIds(["keypress", "click", "customEvent1"]);
+        cerm.removeEventListenerByIds([1, "customId1", 0]);
         ```
 
 ## Example

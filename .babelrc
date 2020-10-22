@@ -6,7 +6,7 @@
     "cdn": {
       "presets": [
         [
-          "@babel/preset-env",
+          "@babel/env",
           {
             "modules": false
           }
