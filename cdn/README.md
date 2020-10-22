@@ -21,6 +21,7 @@ With the advent of **Single Web Applications** (_**React, Vue, Angular**_), mana
 
 ## Changelog 	
 ###### A detailed changelog, intended for programmers
+- **1.1.4** - Update documentation
 - **1.1.3** - Build process automation for using a CDN and NPM done, Update documentation
 - **1.1.2** - Update documentation
 - **1.1.1** - Build process automation for using a CDN (prepare) and NPM, Update documentation
@@ -39,8 +40,11 @@ With the advent of **Single Web Applications** (_**React, Vue, Angular**_), mana
 Learn how to include CERMJS in your project
 
 #### Installation
-The best way to consume CERMJS is via the npm package which you can install with npm.
+The best way to consume CERMJS for a Single Wep App is via the npm package which you can install with npm.
 > npm install cermjs
+
+For using it with Vanilla JS, download it from `cdn/index.js` or use this CDN:
+> https://cdn.jsdelivr.net/gh/ARKHN3B/cermjs@main/cdn/index.js
 
 #### Design pattern
 CERM is a module based on a design pattern: the singleton. The objective is to restrict the instance of its class to a single call. In this way, **no matter where you call it from, it will always be the same** instance.
@@ -48,8 +52,13 @@ CERM is a module based on a design pattern: the singleton. The objective is to r
 #### Usage 
 To call this module, nothing could be easier. Simply import the module as soon as you need it like this: 
 ```js
+// Single Web App (like React, Vue, Angular)
 import cerm from "cermjs"; // ES6
 const cerm = require("cermjs"); // ES5
+```
+```html
+<!-- Vanilla JS -->
+<script src="https://cdn.jsdelivr.net/gh/ARKHN3B/cermjs@main/cdn/index.js"></script>
 ```
 
 ## API
